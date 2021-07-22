@@ -1,5 +1,3 @@
-# demo-pic32mm-curiosity
-
 ================================================================================
 PIC32MM USB Curiosity Board - Out of box demo 
 ================================================================================
@@ -67,6 +65,5 @@ application is open and connected to the device.  This is caused because the OS
 holds the USB device in an unconfigured state until the PC application connects
 to it, unlike a Windows system that automatically configures the device for 
 configuration 1.
-
 
 

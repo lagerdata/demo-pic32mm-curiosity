@@ -1,0 +1,12 @@
+[LAGER]
+
+[DEVENV]
+image = lagerdata/devenv-microchip-pic32mm
+mount_dir = /app
+shell = /bin/bash
+cmd.generate-makefiles = prjMakefilesGenerator pic32mm_usb_curiosity_demo.X
+cmd.build = cd pic32mm_usb_curiosity_demo.X;/opt/microchip/mplabx/v5.50/mplab_platform/bin/make
+cmd.clean = cd pic32mm_usb_curiosity_demo.X;/opt/microchip/mplabx/v5.50/mplab_platform/bin/make clean
+cmd.generate-and-build = prjMakefilesGenerator pic32mm_usb_curiosity_demo.X;cd pic32mm_usb_curiosity_demo.X;/opt/microchip/mplabx/v5.50/mplab_platform/bin/make
+cmd.remove-generated-makefiles = cd pic32mm_usb_curiosity_demo.X/nbproject;rm *.mk
+
