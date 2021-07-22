@@ -16,7 +16,7 @@ jobs:
           submodules: 'recursive'
 
       - name: Build Project
-        uses: docker://lagerdata/devenv-cortexm-pic32mm
+        uses: docker://lagerdata/devenv-microchip-pic32mm
         with:
           entrypoint: lager
           args: exec generate-and-build
