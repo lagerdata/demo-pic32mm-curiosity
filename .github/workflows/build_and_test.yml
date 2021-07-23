@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Connect to gateway
-        uses: docker://lagerdata/lager-cli
+        uses: docker://lagerdata/lager-cli:version-0.1.97
         env:
           LAGER_TOKEN_ID: ${{ secrets.LAGER_TOKEN_ID }} 
           LAGER_TOKEN_SECRET: ${{ secrets.LAGER_TOKEN_SECRET }}     #This is setup inside GitHub see https://docs.lagerdata.com/ci/github_actions.html     
@@ -51,7 +51,7 @@ jobs:
           name: app_hexfile
 
       - name: Flash App
-        uses: docker://lagerdata/lager-cli
+        uses: docker://lagerdata/lager-cli:version-0.1.97
         env:
           LAGER_TOKEN_ID: ${{ secrets.LAGER_TOKEN_ID }} 
           LAGER_TOKEN_SECRET: ${{ secrets.LAGER_TOKEN_SECRET }}
@@ -64,7 +64,7 @@ jobs:
     needs: [flash]
     steps:
       - name: Reset board
-        uses: docker://lagerdata/lager-cli
+        uses: docker://lagerdata/lager-cli:version-0.1.97
         env:
           LAGER_TOKEN_ID: ${{ secrets.LAGER_TOKEN_ID }} 
           LAGER_TOKEN_SECRET: ${{ secrets.LAGER_TOKEN_SECRET }}     #This is setup inside GitHub see https://docs.lagerdata.com/ci/github_actions.html     
