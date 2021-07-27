@@ -1,7 +1,7 @@
 [LAGER]
 
 [DEVENV]
-image = lagerdata/devenv-microchip-pic32mm:version-0.1
+image = lagerdata/devenv-microchip-pic32mm:version-0.2
 mount_dir = /app
 shell = /bin/bash
 cmd.generate-makefiles = prjMakefilesGenerator pic32mm_usb_curiosity_demo.X

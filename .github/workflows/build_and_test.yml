@@ -16,7 +16,7 @@ jobs:
           submodules: 'recursive'
 
       - name: Build Project
-        uses: docker://lagerdata/devenv-microchip-pic32mm:version-0.1
+        uses: docker://lagerdata/devenv-microchip-pic32mm:version-0.2
         with:
           entrypoint: lager
           args: exec generate-and-build
@@ -57,7 +57,7 @@ jobs:
           LAGER_TOKEN_SECRET: ${{ secrets.LAGER_TOKEN_SECRET }}
         with:
           entrypoint: lager
-          args: flash --hexfile /github/workspace/pic32mm_usb_curiosity_demo.X.production.hex
+          args: flash --hexfile /github/workspace/pic32mm_usb_curiosity_demo.X.production.hex --no-verify
 
   test: #test
     runs-on: ubuntu-latest
