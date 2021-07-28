@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch mips-gdb",
+            "type": "cppdbg",
+            "request": "launch",
+            "miDebuggerPath": "/usr/local/bin/mips-gdb",
+            "miDebuggerArgs": "--cd=${workspaceFolder} --nx",
+            "MIMode": "gdb", 
+            "program": "${workspaceFolder}/pic32mm_usb_curiosity_demo.X/dist/default/production/pic32mm_usb_curiosity_demo.X.production.elf", 
+             "setupCommands": [
+                {"text": "set remotetimeout 5"},
+                {"text": "target remote localhost:3333"},
+                {"text": "monitor reset init"},
+                {"text": "file 'pic32mm_usb_curiosity_demo.X/dist/default/production/pic32mm_usb_curiosity_demo.X.production.elf'"},
+                {"text": "load"},
+                {"text": "break main","ignoreFailures": true},
+                {"text": "monitor reset halt"}
+            ],
+            "launchCompleteCommand": "None",
+            "externalConsole": false,
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
