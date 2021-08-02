@@ -53,3 +53,5 @@ dkms.conf
 
 #Auto-generated makefiles
 *.mk
+pic32mm_usb_curiosity_demo.X/dist/default/production/memoryfile.xml
+pic32mm_usb_curiosity_demo.X/nbproject/Makefile-genesis.properties
